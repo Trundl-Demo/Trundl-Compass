@@ -199,5 +199,4 @@ workflows:
             - run_tests
           context: 
             - Jira
-            - compass-integration-venkatap
-            
+            - compass-integration-venkatap            
