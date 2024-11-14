@@ -178,13 +178,13 @@ workflows:
       - builds:
           context: 
             - Jira
-            - compass-integration-venkatap
+            - compass-integration-demotrundl
       - deploy:
           requires:
             - builds
           context: 
             - Jira
-            - compass-integration-venkatap
+            - compass-integration-demotrundl
           post-steps:
             - compass/notify_deployment:
                 environment_type: production
@@ -193,10 +193,10 @@ workflows:
             - deploy
           context: 
             - Jira
-            - compass-integration-venkatap
+            - compass-integration-demotrundl
       - rollback:
           requires:
             - run_tests
           context: 
             - Jira
-            - compass-integration-venkatap
+            - compass-integration-demotrundl
